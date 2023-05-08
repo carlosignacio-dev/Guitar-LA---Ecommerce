@@ -31,9 +31,30 @@ img {
     background-size: cover;
     background-position: center;
     padding: 5rem 0;
+    position: relative;
 }
 .header__guitarra {
     display: none;
+}
+@media (min-width: 992px) {
+    .header__guitarra {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;        
+
+        animation-name: mostrarImagen;
+        animation-duration: 1s;
+    }
+}
+@keyframes mostrarImagen {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .header__barra {
     display: flex;
@@ -53,6 +74,8 @@ img {
     display: flex;
     gap: 2rem;
     margin-top: 5rem;
+    position: relative;
+    z-index: 1;
 }
 @media (min-width: 768px) {
     .navegacion {
@@ -71,4 +94,40 @@ img {
 .navegacion__enlace:hover {
     background-color: var(--primary);
     border-radius: 1rem;
+}
+
+/* Modelo  */
+.modelo {
+    color: var(--blanco);
+    margin-top: 5rem;
+    text-align: center;    
+}
+@media (min-width: 768px) {
+    .modelo {
+        text-align: left;
+        width: 50%;
+    }
+}
+.modelo__nombre {
+    font-size: 8rem;
+}
+.modelo__precio {
+    font-size: 6rem;
+    color: var(--primary);
+    font-weight: 900;
+    line-height: 0;    
+}
+.modelo__enlace {
+    margin-top: 2rem;
+    text-decoration: none;
+    padding: 1rem 5rem;
+    border: 2px solid var(--primary);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: transform 0.3s;
+}
+.modelo__enlace:hover {
+    background-color: var(--primary);
 }
