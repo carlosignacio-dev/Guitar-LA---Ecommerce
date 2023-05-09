@@ -258,6 +258,10 @@ img {
 .entrada__contenido {
     padding: 2rem;
 }
+.entrada {
+    max-width: 80rem;
+    margin: 0 auto;
+}
 .entrada__titulo {
     font-weight: 400;
     font-size: 2.8rem;
