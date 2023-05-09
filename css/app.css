@@ -251,6 +251,9 @@ img {
     .blog__grid {
         grid-template-columns: repeat(4, 1fr);
     }
+    .blog__grid--pagina {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 .entrada__contenido {
     padding: 2rem;
@@ -326,4 +329,16 @@ img {
     color: var(--blanco);
     font-weight: 700;
     text-align: center;
+}
+
+/* Nosotros*/
+.nosotros__grid {
+    display: grid;
+    gap: 4rem;
+}
+@media (min-width: 768px) {
+    .nosotros__grid {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
 }
